@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-// 1. Abstraction and Polymorphism
+// 1. Abstraction and Inheritance
 abstract class Notification {
     abstract void notifyUser(String message);
 }
@@ -63,6 +63,7 @@ public class CampusManager {
         
         // Initializing the system with default data
         Student s1 = new Student("Kalathiya Daksh Rajeshkumar", 202403063, 98.5, 5000.0);
+        // Polymorphism
         Notification email = new EmailNotification();
         
         System.out.println("--- B.Tech (MnC) Academic & Fee Portal ---");
