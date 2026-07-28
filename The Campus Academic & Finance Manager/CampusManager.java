@@ -21,13 +21,12 @@ class BankAccount {
         this.balance = balance;
     }
 
-    // Notice we removed the try-catch block here entirely
     public void withdraw(double x) throws IllegalArgumentException {
         if (x <= balance && x > 0) {
             this.balance -= x;
             System.out.println("Fee Payment Successful: $" + x);
         } else {
-            // Now, this error is thrown outward to whoever called the method
+            // This error is thrown outward to whoever called the method
             throw new IllegalArgumentException("INVALID amount for fee payment.");
         }
     }
